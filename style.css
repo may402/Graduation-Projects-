@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
+
 #scrollTopBtn {
   position: fixed;
   bottom: 25px;
@@ -227,14 +231,45 @@ html {
 }
 
 
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  margin: 10px 40px;
+  font-size: 18px;
+  line-height: 2;
+  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+  color: #333;
+  text-align: right;
+  border-right: 4px solid #9c27b0;
+  border-radius: 10px;
+}
+
+.accordion-content.expanded {
+  max-height: 1000px;
+  padding: 20px;
+}
+
 
 .plain-text {
   text-align: right;
   padding: 20px;
   font-size: 18px;
   color: #333;
-  line-height: 1.8;
+  line-height: 2;
+  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+  margin: 10px 40px;
+  display: none;
 }
+.plain-text.hidden {
+  display: none;
+}
+.plain-text.visible {
+  display: block;
+}
+
 
 .activity-text {
   margin-bottom: 20px;
@@ -276,10 +311,11 @@ body {
   background-color: #f8f4ff;
   direction: rtl;
   text-align: center;
-}
-body {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
 }
 body.loaded {
   opacity: 1;
@@ -288,11 +324,7 @@ body.loaded {
 
 /* ✅ تنسيقات الخطوط الرئيسية */
 
-body {
-  line-height: 1.8;
-  font-size: 16px;
-  color: #333;
-}
+
 /* ✅ الخط الأساسي */
 body, p, span, div, button, a {
   font-family: 'Tahoma', sans-serif;
@@ -353,19 +385,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.plain-text {
-  text-align: right;
-  font-size: 17px;
-  line-height: 2;
-  color: #333;
-  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
-  margin: 10px 40px;
-  display: none;
-}
 
-.plain-text.visible {
-  display: block;
-}
+
+
 
 .module-description i {
   margin-right: 8px;
@@ -446,21 +468,7 @@ p {
 
 
 
-.main-title {
-  font-family: 'Cairo', Tahoma, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.8;
-  color: #4B0082;
-  transition: all 0.3s ease;
-  animation: shineText 4s linear infinite;
-}
 
-.main-title:hover {
-  color: #e91e63;
-  transform: scale(1.05);
-  text-shadow: 1px 1px 8px rgba(106, 13, 173, 0.3);
-}
 
 
 
@@ -557,17 +565,37 @@ header img {
 }
 
 
+.main-title {
+  font-family: 'Cairo', Tahoma, sans-serif;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #4B0082;
+  transition: all 0.3s ease;
+  animation: shineText 4s linear infinite;
+}
+
+.main-title:hover {
+  color: #e91e63;
+  transform: scale(1.05);
+  text-shadow: 1px 1px 8px rgba(106, 13, 173, 0.3);
+}
+/* ✅بتاعت  الصفحة الرييسية */ 
 
 .shiny-name.title {
   font-size: 45px;
 }
-.shiny-name.small-title {
-  font-size: 35px;
+.shiny-mini-title{
+  font-size: 30px;
 }
 
 .shiny-minismall-title{
   font-size: 20px;
   color: #b92272;
+}
+
+/* ✅بتاعت اسماء الموديولات */
+.shiny-name.small-title{
+  font-size: 40px;
 }
 
 .shiny-name.with-slideShine::after {
@@ -780,41 +808,77 @@ animation: floatImg 4s ease-in-out infinite;
 
 
 /* ✅ بوكس الاختبارات */
-.tests-container{
+.tests-container {
   display: flex;
-  flex-direction: column;
-  align-items:right;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin: 50px auto;
-   margin-top: 2px;
-  max-width: 1000px;
-  padding: 20px;
+  padding: 0 30px;
+  max-width: 1200px;
 }
 
-.test-box{
-  display: block;
-  width: 250px;
-  padding: 25px;
+.test-item {
+  width: 300px;
+  background-color: #fff;
   border-radius: 12px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.test-item:hover {
+  transform: translateY(-5px);
+}
+
+.test-box {
+  display: block;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f3e5f5;
   color: #4B0082;
   text-decoration: none;
-  background-color: #f3e5f5;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .test-box:hover {
   transform: scale(1.05);
-  color: #4B0082;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   border: 2px solid #956db2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.test-box:nth-child(1) { background-color: #fce4ec; }
-.test-box:nth-child(2) { background-color: #e1f5fe; }
-.test-box:nth-child(3) { background-color: #e8f5e9; }
+
+/* لون كل صندوق حسب ترتيبه */
+.test-item:nth-child(1) .test-box { background-color: #fce4ec; }
+.test-item:nth-child(2) .test-box { background-color: #e1f5fe; }
+.test-item:nth-child(3) .test-box { background-color: #e8f5e9; }
+
+.test-content h4 {
+  color: #4e1515;
+  font-size: 20px;
+  line-height: 1.7;
+  text-align: right;
+}
+@media (max-width: 600px) {
+  .test-box {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .test-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+
+
+
+
 
 
 
@@ -1234,18 +1298,13 @@ footer {
     padding: 20px;
   }
 
-  .shiny-name.small-title {
-    font-size: 24px;
-  }
-
-  .shiny-minismall-title {
-    font-size: 16px;
-  }
+  
 
   .cta-button {
     padding: 10px 20px;
     font-size: 14px;
   }
+  
 
   /* ✅ إخفاء تأثير الجزيئات (Particles) على الموبايل */
   #particles-js,
@@ -1254,3 +1313,31 @@ footer {
   }
 }
 
+
+.back-to-modules {
+  display: inline-block;
+  background-color: #6a1b9a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-to-modules:hover {
+  background-color: #8e24aa;
+}
+.status-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.status-icon.changed {
+  transform: scale(1.2);
+}
+
+#progress-emoji {
+  font-size: 26px;
+  transition: 0.3s ease;
+  margin-left: 8px;
+}

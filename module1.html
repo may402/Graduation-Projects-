@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8" />
   <title>الموديول الأول - مشروعات التخرج</title>
-      <link rel="icon" href="الصور/images.jpeg" />
+      <link rel="icon" href="images/graduation.jpeg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
    <link rel="stylesheet" href="style.css">
@@ -16,26 +16,27 @@
 <body>
 
    <!-- ✅ الشريط الأول -->
+  <!-- ✅ شريط الشعارات -->
   <div class="logos-bar">
     <div style="display: flex; gap: 15px;">
-      <img src="الصور/جامعة-دمياط.png" alt="شعار الجامعة" />
-      <img src="الصور/تنزيل.jfif" alt="شعار الكلية" />
+      <img src="images/damietta.png" alt="شعار الجامعة" />
+      <img src="images/tech.jfif" alt="شعار الكلية" />
     </div>
     <div style="display: flex; align-items: center; gap: 10px;">
       <span class="my-name">مي محمد حافظ سبلة</span>
-      <img src="الصور/مي.jpg" alt="مي" class="my-pic" />
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
       <div style="display: flex; align-items: center; gap: 10px; margin-right: 10px;">
-        <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998;"><i class='bx bxl-facebook-circle'></i></a>
-        <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366;"><i class='bx bxl-whatsapp'></i></a>
-        <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335;"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+        <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
       </div>
     </div>
   </div>
 
 <!-- ✅ شريط العنوان -->
 <header>
-  <img src="الصور/images.jpeg" alt="مشروع التخرج" />
-
+  <img src="images/graduation.jpeg" alt="مشروع التخرج" />
+  
 <span class="shiny-name with-slideShine">مشروعات التخرج</span>
 </header>
 
@@ -44,7 +45,7 @@
   <ul class="nav-links">
     <li><a href="index.html">الصفحة الرئيسية</a></li>
     <li><a href="#" onclick="showInstructions()">تعليمات الاستخدام</a></li>
-    <li><a href="الأهداف.html">أهداف البيئة</a></li>
+    <li><a href="objectives.html">أهداف البيئة</a></li>
     <li class="dropdown">
       <a href="#">الموديولات <i class='bx bx-chevron-down'></i></a>
       <ul class="dropdown-content">
@@ -56,7 +57,7 @@
         <li><a href="module6.html">الموديول السادس:<br> تسليم المشروع وتقييمه</a></li>
       </ul>
     </li>
-    <li><a href="اتصل بنا.html">اتصل بنا</a></li>
+    <li><a href="contact-us.html">اتصل بنا</a></li>
   </ul>
 </nav>
 
@@ -67,8 +68,9 @@
 
     
    <div class="module-banner">
-  
-  <img src="الصور/3979715.jpg" alt="تنمية المهارات" class="module-img">
+            <img src="images/MM1.jpg" alt="صورة " class="module-img" style="width: 450px;">
+
+
   <div class="module-text">
     <p class="module-title">
       <span class="shiny-name small-title">الموديول الأول</span>
@@ -105,8 +107,8 @@
   <div class="module-description" onclick="toggleContent(this)">
 📘  الهدف العام للموديول  <i class='bx bx-chevron-down'></i>
 </div>
-<div class="plain-text hidden">
-<h4 style="color:  #333;">
+<div class="accordion-content">
+  <h4 style="color:  #333;">
 إلمام طالب تكنولوجيا التعليم بأساسيات مشروعات التخرج
 </h4>
 </div>
@@ -114,8 +116,8 @@
 <div class="module-description" onclick="toggleContent(this)">
   الأهداف الإجرائية <i class='bx bx-chevron-down'></i>
 </div>
-<div class="plain-text hidden">
-  <h4 style="color: #0a2afd;"> 
+<div class="accordion-content">
+    <h4 style="color: #0a2afd;"> 
   بعد الانتهاء من دراسة هذا الموديول يجب أن يكون طالب تكنولوجيا التعليم قادراً على أن:
 </h4>
 <h4 style="color:  #333;">
@@ -125,7 +127,7 @@
        <li>يعدد أهداف مشروع التخرج  .</li>
        <li>يعدد خصائص مشروع التخرج  .</li>
      <li> يميز الطالب المهارات الأساسية اللازمة لإنتاج مشروع التخرج.</li>
-       <li> يرتب  ممراحل إعداد مشروع التخرج ترتيباً منطقياً.</li>
+       <li> يرتب  مراحل إعداد مشروع التخرج ترتيباً منطقياً.</li>
        <li>يحدد نواتج التعلم المستهدفة من  مشروع التخرج  .</li>
        <li>يناقش التحديات المحتملة ويقترح حلولاً لها .</li>
        <li>  يحلل نماذج واقعية لمشروعات التخرج. </li>
@@ -138,7 +140,7 @@
   المحتوى والأنشطة <i class='bx bx-chevron-down'></i>
 </div>
 
-<div class="plain-text hidden">
+<div class="accordion-content">
 
   <!-- ✅ فقرة تعريفية -->
   <p class="activity-text">
@@ -179,9 +181,7 @@
 <div class="module-description" onclick="toggleContent(this)">
   أسئلة الموديول الأول <i class='bx bx-chevron-down'></i>
 </div>
-
-<div class="plain-text hidden">
-
+<div class="accordion-content">
     <h4 style="color: #0a2afd;">
     يمكنك أداء اختبار الموديول :
 
@@ -289,12 +289,12 @@
 
 <script>
   function toggleContent(element) {
-    element.classList.toggle("open");
-    const next = element.nextElementSibling;
-    if (next && next.classList.contains("plain-text")) {
-      next.classList.toggle("visible");
-    }
+  element.classList.toggle("open");
+  const content = element.nextElementSibling;
+  if (content && content.classList.contains("accordion-content")) {
+    content.classList.toggle("expanded");
   }
+}
 </script>
 
 

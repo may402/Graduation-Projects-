@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <meta charset="UTF-8" />
+  <title>   الاختبار القبلي</title>
+      <link rel="icon" href="images/graduation.jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+   <!-- ✅ الشريط الأول -->
+  <!-- ✅ شريط الشعارات -->
+  <div class="logos-bar">
+    <div style="display: flex; gap: 15px;">
+      <img src="images/damietta.png" alt="شعار الجامعة" />
+      <img src="images/tech.jfif" alt="شعار الكلية" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span class="my-name">مي محمد حافظ سبلة</span>
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
+      <div style="display: flex; align-items: center; gap: 10px; margin-right: 10px;">
+        <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+        <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
+      </div>
+    </div>
+  </div>
+
+<!-- ✅ شريط العنوان -->
+<header>
+  <img src="images/graduation.jpeg" alt="مشروع التخرج" />
+  
+<span class="shiny-name with-slideShine">مشروعات التخرج</span>
+</header>
+
+
+  <!-- ✅ شريط التنقل -->
+  <nav>
+  <ul class="nav-links">
+    <li><a href="index.html">الصفحة الرئيسية</a></li>
+        <li><a href="instructions.html">تعليمات الاستخدام</a></li>
+    <li><a href="objectives.html">أهداف البيئة</a></li>
+       <li><a href="tests.html"> الاختبارات</a></li>
+       <li><a href="total modules.html"> موديولات البيئة</a></li>
+    <li><a href="contact-us.html">اتصل بنا</a></li>
+  </ul>
+</nav>
+
+<main class="environment-goals fade-in">
+
+  <section class="intro-heading">
+
+    <h2>
+      ✍️ الاختبار القبلي لبيئة التعلم الإلكتروني التشاركي:</h2>
+    
+    <p class="goal-intro">
+<h3 style="color: #4e1515;"> 
+ اختبر قدراتك أولًا 🔍 <br>
+ ثم ابدأ رحلتك الدراسية 🚀📘
+</h3>
+
+    </p>
+  </section>
+
+
+
+  <div class="module-description" onclick="toggleContent(this)">
+  أسئلة  الاختبار القبلي   <i class='bx bx-chevron-down'></i>
+</div>
+
+<div class="plain-text hidden">
+
+    <h4 style="color: #0a2afd;">
+    ✍️يمكنك اجتياز الاختبار القبلي قبل دراسة الموديولات  :
+
+    </h4>
+
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZB_vhgWmzij4Fmu5OHvDah9RtU_5Pb4IP3Pjv1cxQKyt8HQ/viewform?usp=header"
+
+     target="_blank" 
+     class="cta-button">
+    ✍️ اضغط هنا لبدء الاختبار
+  </a>
+
+</div>
+<h4 style="color: #0a2afd;">
+   <br> بعد الانتهاء يمكنك العودة لاستكمال دراسة الموديولات 📚💻:<br>
+أتمنى لك التوفيق 🌟💪
+
+    </h4>
+</div>
+
+
+<br>
+<br>
+
+  <!-- ✅ زر البدء -->
+<a href="total modules.html" class="cta-button">    ابدأ الدراسة 🚀</a>
+  
+</main>
+
+
+
+<script>
+  function toggleContent(element) {
+    element.classList.toggle("open");
+    const next = element.nextElementSibling;
+    if (next && next.classList.contains("plain-text")) {
+      next.classList.toggle("visible");
+    }
+  }
+</script>
+
+
+
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">
+  ↑
+</button>
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollTopBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+
+
+
+  <script>
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('visible');
+    });
+  });
+</script>
+
+
+
+  <script>
+  
+
+  // القائمة المنسدلة
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown > a");
+    const dropdownContainer = document.querySelector(".dropdown");
+
+    dropdown.addEventListener("click", function (e) {
+      e.preventDefault();
+      dropdownContainer.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!dropdownContainer.contains(e.target)) {
+        dropdownContainer.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+
+ 
+    
+
+
+
+
+<script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ✅ الفوتر -->
+  <footer>
+    <p class="footer-info">
+      <span class="uni">جامعة دمياط -</span>
+      <span class="faculty">كلية التربية -</span>
+      <span class="dept">قسم تكنولوجيا التعليم</span><br><br>
+      <span class="name">مي محمد حافظ سبلة</span>
+      <span class="job">- معيدة بقسم تكنولوجيا التعليم</span>
+    </p>
+    <p class="footer-year">© 2025</p>
+  </footer>
+
+</body>
+</html>
